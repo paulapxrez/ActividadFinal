@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0;
+}
+
+body {
+    background-color: rgb(35, 35, 43);
+    display: flex;
+    justify-content: center;
+    margin-top: 190px;
+    
+}
+
+h1 {
+    color: rgb(138, 152, 192);
+    font-family: "calibri";
+    font-size: large;
+    margin-bottom: 10px;
+
+}
+
+label{
+    color: rgb(105, 115, 147);
+    font-family: "calibri";
+    font-size:small
+}
+
+fieldset{
+    background-color: rgb(63, 63, 78);
+    width:170px; 
+    padding: 20px; 
+    border: 2px solid rgb(71, 76, 90); 
+    border-radius: 3px;
+    scale: 1.5;
+}
+
+button{
+    background-color: rgb(121, 77, 253);
+    color: rgb(255, 255, 255);
+    font-size: x-small;
+    width: 100%;
+    padding: 10px; 
+    border: 2px solid rgb(35, 37, 42);
+    border-radius: 3px;
+
+}
+
+input{
+    font-size:xx-small;
+    margin-bottom: 10px;
+    padding: 5px;
+}
