@@ -1,53 +1,90 @@
 *{
     box-sizing: border-box; 
     margin: 0; 
-    padding: 0;
+    border: 0;
+    padding: 0
 }
 
 body {
-    background-color: rgb(35, 35, 43);
     display: flex;
     justify-content: center;
-    margin-top: 190px;
-    
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(35, 35, 43)
+}
+
+form{
+    width: 230px; 
+    scale: 1.2;
+    padding: 20px 20px 10px 20px; 
+    border: 2px solid rgb(71, 76, 90); 
+    border-radius: 3px;
+    background-color: rgb(63, 63, 78);
 }
 
 h1 {
-    color: rgb(138, 152, 192);
     font-family: "calibri";
     font-size: large;
     margin-bottom: 10px;
-
+    color: rgb(138, 152, 192)
 }
 
 label{
-    color: rgb(105, 115, 147);
     font-family: "calibri";
-    font-size:small
-}
-
-fieldset{
-    background-color: rgb(63, 63, 78);
-    width:170px; 
-    padding: 20px; 
-    border: 2px solid rgb(71, 76, 90); 
-    border-radius: 3px;
-    scale: 1.5;
-}
-
-button{
-    background-color: rgb(121, 77, 253);
-    color: rgb(255, 255, 255);
-    font-size: x-small;
-    width: 100%;
-    padding: 10px; 
-    border: 2px solid rgb(35, 37, 42);
-    border-radius: 3px;
-
+    font-size:small;
+    line-height: 25px;
+    color: rgb(105, 115, 147)
 }
 
 input{
+    display: inline;
     font-size:xx-small;
+    width: 100%;
     margin-bottom: 10px;
     padding: 5px;
+}
+
+span{
+    position:absolute;
+    z-index: 1;
+    width: 12px;
+    height: 12px;
+    right: 25px;
+    margin-top: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+button{
+    position: relative;
+    font-size:xx-small;
+    width: 100%;
+    bottom: 6px;
+    padding: 7.5px; 
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(35, 37, 42);
+    border-radius: 3px;
+    background-color: rgb(121, 77, 253);
+}
+
+.errormessage {
+    visibility: hidden;
+    position: absolute;
+    font-family: "calibri";
+    font-size: xx-small;
+    line-height: 0px;
+    color: rgb(204, 87, 87);
+}
+
+.successInput{
+    outline: 2px solid rgb(3, 184, 6);
+}
+
+.errorInput {
+    outline: 2px solid rgb(204, 87, 87);
+}
+
+.error {
+    visibility: visible;
 }

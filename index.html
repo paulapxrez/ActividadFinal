@@ -1,50 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+    <head>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <script type="text/javascript" src="./index.js" ></script> 
-    
-    <title>Actividad Final</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <script type="text/javascript" src="./index.js" defer></script> 
+        
+        <title>Actividad Final</title>
 
-</head>
+    </head>
 
-<body>
 
-    <form action="./procesaFormulario.php">
-        <fieldset>
+    <body>
+
+        <form id="form">
 
             <h1>Create Account</h1>
 
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" value="" 
-                pattern="[a-zA-Z]+" required/> 
+
+            <label for="nombre">Nombre </label>
+            <fieldset>
+                <input type="text" id="nombre" name="nombre" value="" 
+                    pattern="[a-zA-Z]+" required/>
+                <span id="iconNombre"> </span>
+            </fieldset>
+            <div id="errorNombre" class="errormessage"> </div>
+
+
+            <label for="email">Email </label>
+            <fieldset>
+                <input type="email" id="email" name="email" 
+                    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z.-]+\.[a-zA-Z]{2,4}$" 
+                    required/>
+                <span id="iconEmail"> </span>
+            </fieldset>
+            <div id="errorEmail" class="errormessage"> </div>
+
+
+            <label for="clave">Clave </label>
+            <fieldset>
+                <input type="password" id="clave" name="clave" value="" 
+                    minlength="8" required/>
+                <span id="iconClave"> </span>
+            </fieldset>
+            <div id="errorClave" class="errormessage"> </div>
+            
+
+            <label for="confirmacion">Confirme su clave </label>
+            <fieldset>
+                <input type="password" id="confirmacion" name="confirmacion" 
+                    value="" minlength="8" required/>
+                <span id="iconConfirmacion"> </span>
+            </fieldset>
+            <div id="errorConfirmacion" class="errormessage"> </div>
             <br>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" 
-                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z.-]+\.[a-zA-Z]{2,4}$" 
-                required/>
-            <br>
 
-            <label for="clave">Clave:</label>
-            <input type="password" id="clave" name="clave" value="" 
-                minlength="8" required/>
+            <button type="submit" id="button">ENVIAR</button>
 
-            <label for="clave2">Confirme su clave: </label>
-            <input type="password" id="clave2" name="clave2" value=""
-                minlength="8" required/>
-            <br>
-            <br>
+        </form>
 
-            <button type="submit" onclick="validarDatos()">ENVIAR</button>
+    </body>
 
-        </fieldset>
-    </form>
-
-</body>
 </html>
